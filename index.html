@@ -2,32 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Innovation in Renewable Energy & Climate Change</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Navbar</title>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet"href="assets/css/style.css"/>
 
-    <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
-
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="assets/bootstrap_css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Start Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand text-light" href="#"
-          >Green<span class="navbar-span">Innovate</span></a
-        >
-
+        <a class="navbar-brand" href="#">
+            <span class="logo">Green</span>Innovate</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -36,16 +26,14 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onclick="toggleMenu()"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link text-uppercase active text-light" href="#hero"
-                >Home</a
-              >
+              <a class="nav-link text-uppercase" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-uppercase" href="#projects">Projects</a>
@@ -67,7 +55,7 @@
           <div class="text-end">
             <button
               type="button"
-              class="btn btn-sm btn-outline-light me-2 text-uppercase"
+              class="btn btn-sm btn-outline-secondary me-2 text-uppercase"
               data-bs-toggle="modal"
               data-bs-target="#modalSignin"
             >
@@ -85,12 +73,11 @@
         </div>
       </div>
     </nav>
-    <!-- End Navigation Bar -->
 
     <!-- start main content -->
     <main class="main">
       <!-- Hero Section with Slider -->
-      <section id="hero">
+      <section id="home" class="hero">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
           <!-- Carousel Indicators -->
           <ol class="carousel-indicators">
@@ -318,14 +305,18 @@
       >
         <div class="container text-center">
           <h2 class="section-heading mt-4" style="color: #1e88e5">Services</h2>
-          <div class="row">
+          <div class="row mt-3">
             <div
               class="col-md-4"
               data-aos="fade-up"
               data-aos-anchor-placement="center-bottom"
             >
-              <div class="service-card">
-                <img src="assets/img/hero-image1.jpg" alt="Branding" />
+              <div class="card shadow-sm">
+                <img
+                  src="assets/img/hero-image1.jpg"
+                  alt="Branding"
+                  class="w-100"
+                />
                 <h4>Renewable Energy Branding</h4>
                 <p>
                   Helping companies craft visual identities that promote
@@ -338,8 +329,12 @@
               data-aos="fade-up"
               data-aos-anchor-placement="center-bottom"
             >
-              <div class="service-card">
-                <img src="assets/img/hero-image2.jpg" alt="Campaigns" />
+              <div class="card shadow-sm">
+                <img
+                  src="assets/img/hero-image2.jpg"
+                  alt="Campaigns"
+                  class="w-100"
+                />
                 <h4>Climate Change Campaigns</h4>
                 <p>
                   Designing powerful visuals that drive climate action and
@@ -352,10 +347,11 @@
               data-aos="fade-up"
               data-aos-anchor-placement="center-bottom"
             >
-              <div class="service-card">
+              <div class="card shadow-sm">
                 <img
                   src="assets/img/hero-image3.jpg"
                   alt="Eco-Friendly Design"
+                  class="w-100"
                 />
                 <h4>Eco-Friendly Product Design</h4>
                 <p>
@@ -379,12 +375,10 @@
               data-aos="fade-up"
               data-aos-anchor-placement="center-bottom"
             >
-              <div class="blog-card border-0 shadow-lg">
+              <div class="card shadow-sm border-0">
                 <iframe
                   src="https://www.youtube.com/embed/ca67SCfxkCI?si=qp0gAPPiLyf4j6i-"
-                  class="img-fluid w-75"
-                  width="320"
-                  height="240"
+                  class="img-fluid w-100"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -393,10 +387,10 @@
                 ></iframe>
 
                 <div class="card-body">
-                  <h4 class="text-start">
+                  <h4 class="text-start" style="color: #555">
                     The Philippines To Build The World's Largest Solar Park
                   </h4>
-                  <p class="text-start">
+                  <p class="text-start" style="color: #555">
                     Solar energy is one of the promising renewable energy
                     sources in the Philippines. With the abundant exposure of
                     the country to the sun, it makes the country build a very
@@ -420,11 +414,9 @@
               data-aos="fade-up"
               data-aos-anchor-placement="center-bottom"
             >
-              <div class="blog-card">
+              <div class="card shadow-sm">
                 <iframe
-                  class="img-fluid w-75"
-                  width="320"
-                  height="240"
+                  class="img-fluid w-100"
                   src="https://www.youtube.com/embed/F6mZD6Z7ROo?si=_5EDht7_XDijSNec"
                   title="YouTube video player"
                   frameborder="0"
@@ -434,10 +426,10 @@
                 ></iframe>
 
                 <div class="card-body">
-                  <h4 class="text-start">
+                  <h4 class="text-start" style="color: #555">
                     Building The Philippines Largest Natural Gas Power Plant
                   </h4>
-                  <p class="text-start">
+                  <p class="text-start" style="color: #555">
                     The Ilijan Combined Cycle is a massive 1,200MW dual-fired
                     powerplant, making it the largest-ever natural gas facility.
                   </p>
@@ -451,12 +443,14 @@
               </div>
             </div>
 
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <div class="blog-card">
+            <div
+              class="col-md-4 mb-4"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="card shadow-sm">
                 <iframe
-                  class="img-fluid w-75"
-                  width="320"
-                  height="240"
+                  class="img-fluid w-100"
                   src="https://www.youtube.com/embed/QZO2ONptyOo?si=O7mwSzd27fd74WkX"
                   title="YouTube video player"
                   frameborder="0"
@@ -467,10 +461,10 @@
 
                 <div class="card-body">
                   <div class="p-4">
-                    <h5 class="text-start">
+                    <h5 class="text-start" style="color: #555">
                       The Philippines Can Become a Renewable Energy Powerhouse
                     </h5>
-                    <p class="text-start">
+                    <p class="text-start" style="color: #555">
                       AC Energy’s subsidiary for the development of its
                       45-megawatt (MW) Balaoi wind farm project in Pagudpud,
                       Ilocos Norte, as well as its renewable energy (RE)
@@ -489,20 +483,31 @@
               </div>
             </div>
 
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <div class="blog-card">
-                <img src="assets/img/solar.jpg" alt="solar energy" class="img-fluid w-75" width="320"
-                height="240">
+            <div
+              class="col-md-4 mb-4"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="card shadow-sm">
+                <img
+                  src="assets/img/solar.jpg"
+                  alt="solar energy"
+                  class="img-fluid w-100"
+                />
 
                 <div class="card-body">
                   <div class="p-4">
-                    <h5 class="text-start">
-                      Clean Energy Investment in 2024 Twice Amount for Fossil Fuels: IEA
+                    <h5 class="text-start" style="color: #555">
+                      Clean Energy Investment in 2024 Twice Amount for Fossil
+                      Fuels: IEA
                     </h5>
-                    <p class="text-start">
-                      The IEA’s World Energy Investment 2024 reveals that while clean energy spending is at record levels,
-                       the investments still fall short of what is required for a 1.5°C-aligned world. 
-                      The agency also highlights stark market contrasts and calls for more ambitious policy measures to bridge the financing gap.
+                    <p class="text-start" style="color: #555">
+                      The IEA’s World Energy Investment 2024 reveals that while
+                      clean energy spending is at record levels, the investments
+                      still fall short of what is required for a 1.5°C-aligned
+                      world. The agency also highlights stark market contrasts
+                      and calls for more ambitious policy measures to bridge the
+                      financing gap.
                     </p>
                     <a
                       href="https://energytracker.asia/clean-energy-investment/"
@@ -515,19 +520,29 @@
               </div>
             </div>
 
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <div class="blog-card">
-                <img src="assets/img/hero-image2.jpg" alt="solar energy" class="img-fluid w-75" width="320"
-                height="240">
+            <div
+              class="col-md-4 mb-4"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="card shadow-sm">
+                <img
+                  src="assets/img/hero-image2.jpg"
+                  alt="solar energy"
+                  class="img-fluid w-100"
+                />
 
                 <div class="card-body">
                   <div class="p-4">
-                    <h5 class="text-start">
-                      The Renewable Energy Policy in Vietnam Risks Deterring Investors
+                    <h5 class="text-start" style="color: #555">
+                      The Renewable Energy Policy in Vietnam Risks Deterring
+                      Investors
                     </h5>
-                    <p class="text-start">
-                      Maintaining a healthy ongoing dialogue with clean energy investors and project developers is critical if 
-                      Vietnam is to get back on track and continue stunning the world with its renewable energy progress.
+                    <p class="text-start" style="color: #555">
+                      Maintaining a healthy ongoing dialogue with clean energy
+                      investors and project developers is critical if Vietnam is
+                      to get back on track and continue stunning the world with
+                      its renewable energy progress.
                     </p>
                     <a
                       href="https://energytracker.asia/renewable-energy-policy-in-vietnam-risks-deterring-investors/"
@@ -540,20 +555,30 @@
               </div>
             </div>
 
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-              <div class="blog-card">
-                <img src="assets/img/img-3.jpg" alt="solar energy" class="img-fluid w-75" width="320"
-                height="240">
+            <div
+              class="col-md-4 mb-4"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
+            >
+              <div class="card shadow-sm">
+                <img
+                  src="assets/img/img-3.jpg"
+                  alt="solar energy"
+                  class="img-fluid w-100"
+                />
 
                 <div class="card-body">
                   <div class="p-4">
-                    <h5 class="text-start">
-                      Energy Economics Show Renewable Energy Generation Is Less Capex Intensive Than Fossil Fuels
+                    <h5 class="text-start" style="color: #555">
+                      Energy Economics Show Renewable Energy Generation Is Less
+                      Capex Intensive Than Fossil Fuels
                     </h5>
-                    <p class="text-start">
-                      Renewable energy for the power sector keeps getting cheaper to build and operate.
-                       However, much of the Asia-Pacific region is still building out natural gas infrastructure.
-                       The region needs to pivot if it wants to reach its net-zero goals.
+                    <p class="text-start" style="color: #555">
+                      Renewable energy for the power sector keeps getting
+                      cheaper to build and operate. However, much of the
+                      Asia-Pacific region is still building out natural gas
+                      infrastructure. The region needs to pivot if it wants to
+                      reach its net-zero goals.
                     </p>
                     <a
                       href="https://energytracker.asia/energy-economics-show-renewable-energy-generation-is-less-capex-intensive/"
@@ -565,7 +590,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -590,7 +614,9 @@
             <div class="col-md-6 text-start">
               <h2 class="" style="color: #1e88e5">About Us</h2>
               <div class="line"></div>
-              <h1 class="mb-4">Innovation in Renewable Energy & Climate Change</h1>
+              <h4 class="mb-4">
+                Innovation in Renewable Energy & Climate Change
+              </h4>
               <p style="color: #555">
                 Solar energy is one of the promising renewable energy sources in
                 the Philippines. With the abundant exposure of the country to
@@ -623,8 +649,9 @@
 
           <p class="text-center">
             Let’s collaborate on a project that drives sustainability forward.
-             Get in touch to discuss your ideas and see how design can transform your brand.
-             If you have any questions or would like to get involved, please reach out!
+            Get in touch to discuss your ideas and see how design can transform
+            your brand. If you have any questions or would like to get involved,
+            please reach out!
           </p>
           <form action="submit_form.php" method="POST">
             <div class="row">
@@ -867,63 +894,77 @@
     </div>
 
     <!-- Start Footer -->
-    <footer class="text-center py-4">
-      <ul class="footer-nav">
-        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonials">Testimonials</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+    <div class="container" >
+      <footer class="py-5" style="color: #1e88e5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Quick links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#home" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="#projects" class="nav-link p-0 text-body-secondary">Project</a></li>
+              <li class="nav-item mb-2"><a href="#services" class="nav-link p-0 text-body-secondary">Services</a></li>
+              <li class="nav-item mb-2"><a href="#blog" class="nav-link p-0 text-body-secondary">Blogs</a></li>
+              <li class="nav-item mb-2"><a href="#about" class="nav-link p-0 text-body-secondary">About Us</a></li>
+              <li class="nav-item mb-2"><a href="#contact" class="nav-link p-0 text-body-secondary">Contact</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Learn More</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help & Support</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Have a Questions?</h5>
+            <ul class="nav flex-column">
 
-      <div class="footer-social">
-        <a href="https://facebook.com" target="_blank"
-          ><i class="fab fa-facebook"></i
-        ></a>
-        <a href="https://twitter.com" target="_blank"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a href="https://instagram.com" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://linkedin.com" target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-      </div>
+              <li class="nav-item mb-2"><span class="icon ion-ios-pin"></span>
+                <a href="#" class="nav-link p-0 text-body-secondary">Purok 5 Str. Magallaness Sorsogon</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">+09187224851</a></li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">johndoe02@gmail.com</a>
+              </li>
 
-      <p>
-        &copy; 2025 Innovation in Renewable Energy & Climate Change. All Rights
-        Reserved.
-      </p>
-    </footer>
+            </ul>
+          </div>
+    
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <span class="input-group-text" id="email-newsletter-addon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                  </svg>
+                </span>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>&copy; 2025 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
     <!-- End Footer -->
 
-    <script src="assets/bootstrap_js/bootstrap.bundle.min.js"></script>
-    <script src="assets/bootstrap_js/bootstrap.min.js"></script>
-    <script src="assets/bootstrap_js/bootstrap.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/togglebtn.js"></script>
 
-    <script>
-      $(document).ready(function () {
-        // Smooth scrolling for navigation links
-        $("a.nav-link").on("click", function (event) {
-          event.preventDefault();
-          var target = $(this).attr("href");
-          $("html, body").animate(
-            {
-              scrollTop: $(target).offset().top,
-            },
-            800
-          );
-        });
-      });
-    </script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+ </body>
 </html>
