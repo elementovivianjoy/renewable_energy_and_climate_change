@@ -3,6 +3,15 @@
     "development"
   ],
   "hints": {
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "no-inline-styles": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-ms-touch-action"
+        ]
+      }
+    ]
   }
 }

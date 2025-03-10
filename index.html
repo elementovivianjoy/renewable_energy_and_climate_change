@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Responsive Navbar</title>
 
-    <!-- <link rel="stylesheet"href="assets/css/style.css"/> -->
-
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="assets/bootstrap_css/css/style.css" />
 
@@ -14,18 +12,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+      rel="stylesheet"
     />
-    
+
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/bootstrap_css/css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
-    
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
       <a
@@ -47,7 +51,7 @@
           <a href="#home" class="nav-item nav-link active">Home</a>
           <a href="#about_us" class="nav-item nav-link">About</a>
           <a href="#project" class="nav-item nav-link">Project</a>
-          <a href="#blogs" class="nav-item nav-link">Blogs</a>
+          <a href="#blog" class="nav-item nav-link">Blogs</a>
           <div class="nav-item dropdown">
             <a
               href="#"
@@ -86,7 +90,8 @@
     <main class="main" id="main">
       <!-- Hero Section with Slider -->
       <section id="home" class="hero">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+         
           <!-- Carousel Indicators -->
           <ol class="carousel-indicators">
             <li
@@ -96,23 +101,26 @@
             ></li>
             <li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li>
             <li data-bs-target="#heroCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#heroCarousel" data-bs-slide-to="3"></li>
+            <li data-bs-target="#heroCarousel" data-bs-slide-to="4"></li>
           </ol>
 
           <!-- Carousel Items -->
           <div class="carousel-inner">
-            <!-- Slide 1 -->
+            <!-- Slide 0 -->
             <div
               class="carousel-item active"
               style="
-                background-image: url('assets/img/hero-image1.jpg');
+                background-image: url('assets/img/hero-image0.jpg');
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
               "
             >
-              <div
-                class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100"
-              >
+
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+            
+              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100">
                 <h1 class="display-3 text-light fw-bold">
                   Renewable Energy & Climate Change
                 </h1>
@@ -128,21 +136,45 @@
               </div>
             </div>
 
-            <!-- Slide 2 -->
+            <!-- Slide 1 -->
             <div
               class="carousel-item"
               style="
-                background-image: url('assets/img/carousel_1.jpg');
+                background-image: url('assets/img/carousel/carousel-1.jpg');
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
-              "
-            >
-              <div
-                class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100"
-              >
+              ">
+
+              <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+           
+              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
+                <h1 class="display-3 text-light fw-bold">Solar Energy</h1>
+                <p class="lead text-light fw-bold">
+                  Empowering renewable energy brands through creativity.
+                </p>
+                <a
+                  href="https://www.un.org/en/climatechange/what-is-climate-change"
+                  target="_blank"
+                  class="btn btn-primary btn-lg text-dark rounded-pill py-3 px-5 mt-3"
+                  >Explore My Work</a
+                >
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item"
+              style="
+                background-image: url('assets/img/carousel/carousel-2.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+              " >
+              <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+
+              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
                 <h1 class="display-3 text-light fw-bold">
-                  Design That Drives Climate Action
+                 Wind Energy
                 </h1>
                 <p class="lead text-light fw-bold">
                   Transforming ideas into impactful visuals for a greener
@@ -158,11 +190,19 @@
             </div>
 
             <!-- Slide 3 -->
-            <div class="carousel-item" style="background-image: url('assets/img/hero-image3.jpg'); background-size: cover;
-             background-position: center; height: 100vh;" >
+            <div class="carousel-item"
+              style="
+                background-image: url('assets/img/carousel/carousel-3.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+              "
+            >
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+              
               <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
                 <h1 class="display-3 text-light fw-bold">
-                  Creativity Meets Sustainability
+                  Hydropower Energy
                 </h1>
                 <p class="lead text-light fw-bold">
                   Visual storytelling for renewable energy innovations.
@@ -171,16 +211,27 @@
                   href="https://www.un.org/en/climatechange/raising-ambition/renewable-energy"
                   target="_blank"
                   class="btn btn-success btn-lg rounded-pill py-3 px-5 mt-3"
-                  >Read more</a>
+                  >Read more</a
+                >
               </div>
             </div>
 
             <!-- Slide 4 -->
-            <div class="carousel-item" style="background-image: url('assets/img/hero-image3.jpg'); background-size: cover;
-             background-position: center; height: 100vh;" >
-              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
+            <div
+              class="carousel-item"
+              style="
+                background-image: url('assets/img/carousel/carousel-4.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+              "
+            >
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+              
+
+              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100">
                 <h1 class="display-3 text-light fw-bold">
-                  Creativity Meets Sustainability
+                  Geothermal Energy
                 </h1>
                 <p class="lead text-light fw-bold">
                   Visual storytelling for renewable energy innovations.
@@ -189,27 +240,11 @@
                   href="https://www.un.org/en/climatechange/raising-ambition/renewable-energy"
                   target="_blank"
                   class="btn btn-success btn-lg rounded-pill py-3 px-5 mt-3"
-                  >Read more</a>
+                  >Read more</a
+                >
               </div>
             </div>
 
-            <!-- Slide 5 -->
-            <div class="carousel-item" style="background-image: url('assets/img/hero-image3.jpg'); background-size: cover;
-             background-position: center; height: 100vh;" >
-              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
-                <h1 class="display-3 text-light fw-bold">
-                  Creativity Meets Sustainability
-                </h1>
-                <p class="lead text-light fw-bold">
-                  Visual storytelling for renewable energy innovations.
-                </p>
-                <a
-                  href="https://www.un.org/en/climatechange/raising-ambition/renewable-energy"
-                  target="_blank"
-                  class="btn btn-success btn-lg rounded-pill py-3 px-5 mt-3"
-                  >Read more</a>
-              </div>
-            </div>
           </div>
 
           <!-- Carousel Controls -->
@@ -232,9 +267,9 @@
         </div>
       </section>
 
-      <!-- Services Section -->
+      <!-- Carbon Footprint Section -->
       <section
-        id="services"
+        id="what_is"
         class="container-fluid py-5 mt-4"
         style="background-color: #f1f8ff"
       >
@@ -508,7 +543,7 @@
 
       <!-- About Me Section -->
       <section
-        id="about"
+        id="about_us"
         class="py-5 mt-4"
         style="background-color: #f1f8ff"
         data-aos="fade-up"
@@ -558,7 +593,7 @@
       </section>
 
       <!-- Portfolio Section -->
-      <section id="projects" class="container py-5 mt-4">
+      <section id="project" class="container py-5 mt-4">
         <h2 class="section-heading text-center mb-4 mt-4 fw-bold text-primary">
           Featured Renewable Energy
         </h2>
@@ -575,7 +610,7 @@
             data-aos-anchor-placement="center-bottom"
           >
             <img
-              src="assets/img/Burgos, Philippines.jpg"
+              src="assets/img/featured/wind.jpg"
               alt="Project 1"
               class="img-fluid rounded mb-3"
             />
@@ -591,7 +626,7 @@
             data-aos-anchor-placement="center-bottom"
           >
             <img
-              src="assets/img/Windmill-Farm-Pililla-Rizal-Philippines.jpg"
+              src="assets/img/featured/Windmill-Farm-Pililla-Rizal-Philippines.jpg"
               alt="Project 1"
               class="img-fluid rounded mb-3"
             />
@@ -617,11 +652,8 @@
               educate and inspire action for sustainable solutions.
             </h5>
           </div>
-          <div
-            class="col-md-4"
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-          >
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             <img
               src="assets/img/hero-image3.jpg"
               alt="Project 3"
@@ -635,13 +667,9 @@
             </h5>
           </div>
 
-          <div
-            class="col-md-4"
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-          >
+          <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" >
             <img
-              src="assets/img/Hydroelectric Dam in Scenic Mountainous Region.jpg"
+              src="assets/img/featured/hydro.jpg"
               alt="Project 3"
               class="img-fluid rounded mb-3"
             />
@@ -649,6 +677,18 @@
             <div class="line"></div>
             <h5 class="lh-base">Huoi Quang Hydropower Plant</h5>
           </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" >
+            <img
+              src="assets/img/featured/thermal.jpg"
+              alt="Project 3"
+              class="img-fluid rounded mb-3"
+            />
+            <p class="text-primary mb-0">Geothermal Power Plants</p>
+            <div class="line"></div>
+            <h5 class="lh-base">Therma Visayas, Inc.</h5>
+          </div>
+
         </div>
       </section>
 
@@ -1034,7 +1074,7 @@
 
     <!-- Back to Top -->
     <a
-      href="#main"
+      href="#"
       class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
