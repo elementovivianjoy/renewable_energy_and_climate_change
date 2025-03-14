@@ -28,6 +28,21 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/bootstrap_css/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #map {
+        height: 500px;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -51,6 +66,7 @@
           <a href="#home" class="nav-item nav-link active">Home</a>
           <a href="#about_us" class="nav-item nav-link">About</a>
           <a href="#project" class="nav-item nav-link">Project</a>
+          <a href="#team" class="nav-item nav-link">Team</a>
           <a href="#blog" class="nav-item nav-link">Blogs</a>
           <div class="nav-item dropdown">
             <a
@@ -61,12 +77,36 @@
             >
             <div class="dropdown-menu bg-light m-0">
               <a href="#what_is" class="dropdown-item active">What Is?</a>
-              <a href="usages_map.html" class="dropdown-item">Usages Map</a>
+              <a href="#usages_map" class="dropdown-item">Usages Map</a>
             </div>
           </div>
           <a href="#contact" class="nav-item nav-link">Contact</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle active me-5"
+              data-bs-toggle="dropdown"
+            ></a>
+            <div class="dropdown-menu bg-light">
+              <a
+                href=""
+                class="dropdown-item active me-2"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignin"
+                >Login</a
+              >
+              <a
+                href=""
+                class="dropdown-item me-2"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSignup"
+                >Sign Up</a
+              >
+            </div>
+          </div>
         </div>
-        <button
+
+        <!-- <button
           type="button"
           class="btn btn-sm btn-outline-secondary me-2 text-uppercase"
           data-bs-toggle="modal"
@@ -81,7 +121,7 @@
           data-bs-target="#modalSignup"
         >
           Sign-up
-        </button>
+        </button> -->
       </div>
     </nav>
     <!-- Navbar End -->
@@ -90,8 +130,13 @@
     <main class="main" id="main">
       <!-- Hero Section with Slider -->
       <section id="home" class="hero">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
-         
+        <div
+          id="heroCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+          data-bs-wrap="true"
+        >
           <!-- Carousel Indicators -->
           <ol class="carousel-indicators">
             <li
@@ -117,10 +162,14 @@
                 height: 100vh;
               "
             >
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100"
+                style="background-color: rgba(0, 0, 0, 0.5)"
+              ></div>
 
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-            
-              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100">
+              <div
+                class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100"
+              >
                 <h1 class="display-3 text-light fw-bold">
                   Renewable Energy & Climate Change
                 </h1>
@@ -144,11 +193,16 @@
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
-              ">
+              "
+            >
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100"
+                style="background-color: rgba(0, 0, 0, 0.5)"
+              ></div>
 
-              <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-           
-              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
+              <div
+                class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100"
+              >
                 <h1 class="display-3 text-light fw-bold">Solar Energy</h1>
                 <p class="lead text-light fw-bold">
                   Empowering renewable energy brands through creativity.
@@ -163,19 +217,24 @@
             </div>
 
             <!-- Slide 2 -->
-            <div class="carousel-item"
+            <div
+              class="carousel-item"
               style="
                 background-image: url('assets/img/carousel/carousel-2.jpg');
                 background-size: cover;
                 background-position: center;
                 height: 100vh;
-              " >
-              <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+              "
+            >
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100"
+                style="background-color: rgba(0, 0, 0, 0.5)"
+              ></div>
 
-              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
-                <h1 class="display-3 text-light fw-bold">
-                 Wind Energy
-                </h1>
+              <div
+                class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100"
+              >
+                <h1 class="display-3 text-light fw-bold">Wind Energy</h1>
                 <p class="lead text-light fw-bold">
                   Transforming ideas into impactful visuals for a greener
                   planet.
@@ -190,7 +249,8 @@
             </div>
 
             <!-- Slide 3 -->
-            <div class="carousel-item"
+            <div
+              class="carousel-item"
               style="
                 background-image: url('assets/img/carousel/carousel-3.jpg');
                 background-size: cover;
@@ -198,12 +258,15 @@
                 height: 100vh;
               "
             >
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-              
-              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100" >
-                <h1 class="display-3 text-light fw-bold">
-                  Hydropower Energy
-                </h1>
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100"
+                style="background-color: rgba(0, 0, 0, 0.5)"
+              ></div>
+
+              <div
+                class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100"
+              >
+                <h1 class="display-3 text-light fw-bold">Hydropower Energy</h1>
                 <p class="lead text-light fw-bold">
                   Visual storytelling for renewable energy innovations.
                 </p>
@@ -226,13 +289,15 @@
                 height: 100vh;
               "
             >
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-              
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100"
+                style="background-color: rgba(0, 0, 0, 0.5)"
+              ></div>
 
-              <div class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100">
-                <h1 class="display-3 text-light fw-bold">
-                  Geothermal Energy
-                </h1>
+              <div
+                class="carousel-caption text-center d-flex flex-column justify-content-center align-items-center h-100"
+              >
+                <h1 class="display-3 text-light fw-bold">Geothermal Energy</h1>
                 <p class="lead text-light fw-bold">
                   Visual storytelling for renewable energy innovations.
                 </p>
@@ -244,7 +309,6 @@
                 >
               </div>
             </div>
-
           </div>
 
           <!-- Carousel Controls -->
@@ -592,7 +656,7 @@
         </div>
       </section>
 
-      <!-- Portfolio Section -->
+      <!-- Featured Project Section -->
       <section id="project" class="container py-5 mt-4">
         <h2 class="section-heading text-center mb-4 mt-4 fw-bold text-primary">
           Featured Renewable Energy
@@ -653,7 +717,11 @@
             </h5>
           </div>
 
-          <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+          <div
+            class="col-md-4"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
             <img
               src="assets/img/hero-image3.jpg"
               alt="Project 3"
@@ -667,7 +735,11 @@
             </h5>
           </div>
 
-          <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" >
+          <div
+            class="col-md-4"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
             <img
               src="assets/img/featured/hydro.jpg"
               alt="Project 3"
@@ -678,7 +750,11 @@
             <h5 class="lh-base">Huoi Quang Hydropower Plant</h5>
           </div>
 
-          <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom" >
+          <div
+            class="col-md-4"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
             <img
               src="assets/img/featured/thermal.jpg"
               alt="Project 3"
@@ -688,7 +764,92 @@
             <div class="line"></div>
             <h5 class="lh-base">Therma Visayas, Inc.</h5>
           </div>
+        </div>
+      </section>
 
+      <!-- Team Start -->
+      <section class="container-fluid py-5 mt-4" id="team" style="background-color: #f1f8ff">
+        <h2 class="section-heading text-center mb-4 mt-4 fw-bold text-primary">Our Amazing Team</h2>
+        <h6 class="section-heading text-center mb-4 mt-4 fw-bold" style="color: #1b1a1adc" >
+          Showing real-time climate and renewable energy data across the world.
+        </h6>
+        <div class="row">
+          <div class="col-lg-4 mt-4">
+            <div class="team-member">
+              <div class="card">
+                <img
+                class="mx-auto rounded-circle img-fluid mt-4"
+                src="assets/img/gallery-1.jpg"
+                alt="..."
+              />
+                <div class="card-body">
+                  <h4>Vivian Joy Elemento</h4>
+                  <p class="text-muted">Group Leader</p>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 mt-4">
+            <div class="team-member">
+              <div class="card">
+                <img
+                class="mx-auto rounded-circle img-fluid mt-4"
+                src="assets/img/gallery-1.jpg"
+                alt="..."
+              />
+                <div class="card-body">
+                  <h4>Vivian Joy Elemento</h4>
+                  <p class="text-muted">Lead Designer</p>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="team-member">
+              <div class="card">
+                <img
+                class="mx-auto rounded-circle img-fluid mt-4"
+                src="assets/img/gallery-1.jpg"
+                alt="..."
+              />
+                <div class="card-body">
+                  <h4>Vivian Joy Elemento</h4>
+                  <p class="text-muted">Lead Designer</p>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-lg-square btn-outline-primary rounded-circle btn-social mx-1" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Team End -->
+
+      <!-- Usages Map Section -->
+      <section id="usages_map" class="container py-5 mt-4">
+        <h2 class="section-heading text-center mb-4 mt-4 fw-bold text-primary">
+          Live Renewable Energy & Climate Change Map
+        </h2>
+        <h4 class="section-heading text-center mb-4 mt-4 fw-bold text-primary">
+          Renewable energy consumption (% of total final energy consumption)
+        </h4>
+        <h6
+          class="section-heading text-center mb-4 mt-4 fw-bold"
+          style="color: #1b1a1adc"
+        >
+          Showing real-time climate and renewable energy data across the world.
+        </h6>
+        <div class="row">
+          <div id="map"></div>
         </div>
       </section>
 
@@ -1081,5 +1242,11 @@
 
     <script src="assets/bootstrap_js/bootstrap.bundle.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- Leaflet.js Library -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Leaflet.js Library -->
+    <script src="assets/js/usage_map.js"></script>
   </body>
 </html>
